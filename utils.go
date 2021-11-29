@@ -8,6 +8,7 @@ import (
 	"time"
 )
 
+// Build log message
 func logBuild(format int, _message string, _level string, messageColor string, fatal bool) string {
 	color := white
 	if fatal {
