@@ -6,7 +6,7 @@ var (
 	_fatalFormat       = 0
 	_errorFormat       = 0
 	_warningFormat     = 0
-	_infoFormat        = 2
+	_infoFormat        = 0
 	_debugFormat       = 0
 	_traceFormat       = 0
 )
