@@ -16,6 +16,12 @@ func LogTimeFormat(format string) {
 	timeFormat = format
 }
 
+// FATAL default = 0
+// ERROR default = 0
+// WARNING default = 0
+// INFO default = 2
+// DEBUG default = 0
+//TRACE default = 0
 // 0 = [TIME]   [APPNAME]  [LEVEL]   [/xxx/xx/main.go LINE]   "MESSAGE"
 // 1 = [LEVEL]  [APPNAME]  [/xxx/xx/main.go LINE]   "MESSAGE"
 // 2 = [LEVEL]  [APPNAME]  "MESSAGE"

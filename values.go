@@ -6,13 +6,13 @@ var (
 	_fatalFormat       = 0
 	_errorFormat       = 0
 	_warningFormat     = 0
-	_infoFormat        = 0
+	_infoFormat        = 2
 	_debugFormat       = 0
 	_traceFormat       = 0
 )
 
 const (
-	version = "0.0.1"
+	version = "0.0.2"
 
 	_fatal   = red + "[FATAL]   " + reset
 	_error   = red + "[ERROR]   " + reset
