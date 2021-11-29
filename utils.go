@@ -37,7 +37,7 @@ func logTime(format string) string {
 
 func line() string {
 	_, file, line, _ := runtime.Caller(3)
-	return "[" + file + " " + strconv.Itoa(line) + "]  "
+	return "[" + file + ":" + strconv.Itoa(line) + "]  "
 }
 
 func appName() string {

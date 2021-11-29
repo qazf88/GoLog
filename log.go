@@ -72,7 +72,7 @@ func LogDebugFormat(_format int) {
 }
 
 //LogTraseFormat format TRACE message
-func LogTraseFormat(_format int) {
+func LogTraceFormat(_format int) {
 	_traceFormat = _format
 }
 
