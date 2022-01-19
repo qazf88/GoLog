@@ -9,24 +9,24 @@ import (
 )
 
 // Build log message
-func logBuild(format int, _message string, _level string, messageColor string, fatal bool) string {
+func logBuild(format int, _message string, _level string, messageColor string, fatal bool, _line bool) string {
 	color := white
 	if fatal {
 		color = red
 	}
 	switch format {
 	case 0:
-		return logTime(timeFormat) + _level + color + appName() + reset + color + line() + reset + messageColor + _message + reset
+		return logTime(timeFormat) + _level + color + appName() + reset + color + line(_line) + reset + messageColor + _message + reset
 	case 1:
-		return _level + color + appName() + line() + reset + messageColor + _message + reset
+		return _level + color + appName() + line(_line) + reset + messageColor + _message + reset
 	case 2:
 		return _level + color + appName() + reset + messageColor + _message + reset
 	case 3:
-		return _level + color + appName() + reset + logTime(timeFormat) + color + line() + reset + messageColor + _message + reset
+		return _level + color + appName() + reset + logTime(timeFormat) + color + line(_line) + reset + messageColor + _message + reset
 	case 4:
-		return _level + color + appName() + line() + reset + messageColor + _message + reset
+		return _level + color + appName() + line(_line) + reset + messageColor + _message + reset
 	default:
-		return logTime(timeFormat) + color + appName() + reset + _level + color + line() + reset + messageColor + _message + reset
+		return logTime(timeFormat) + color + appName() + reset + _level + color + line(_line) + reset + messageColor + _message + reset
 	}
 }
 
@@ -35,9 +35,12 @@ func logTime(format string) string {
 	return green + "[" + res + "] " + reset
 }
 
-func line() string {
+func line(_line bool) string {
 	_, file, line, _ := runtime.Caller(3)
-	return "[" + file + ":" + strconv.Itoa(line) + "]  "
+	if _line {
+		return "[" + file + ":" + strconv.Itoa(line) + "]  "
+	}
+	return "[" + file + "]  "
 }
 
 func appName() string {

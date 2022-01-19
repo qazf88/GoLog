@@ -73,38 +73,38 @@ func LogTraceFormat(_format int) {
 
 func Fatal(_message string) {
 	if logLevel > 0 {
-		fmt.Println(logBuild(_fatalFormat, _message, _fatal, red, true))
+		fmt.Println(logBuild(_fatalFormat, _message, _fatal, red, true, false))
 	}
 }
 
 func Error(_message string) {
 	if logLevel > 1 {
-		fmt.Println(logBuild(_errorFormat, _message, _error, red, false))
+		fmt.Println(logBuild(_errorFormat, _message, _error, red, false, false))
 	}
 
 }
 
 func Warning(_message string) {
 	if logLevel > 2 {
-		fmt.Println(logBuild(_warningFormat, _message, _warning, yellow, false))
+		fmt.Println(logBuild(_warningFormat, _message, _warning, yellow, false, false))
 	}
 }
 
 func Info(_message string) {
 	if logLevel > 3 {
-		fmt.Println(logBuild(_infoFormat, _message, _info, green, false))
+		fmt.Println(logBuild(_infoFormat, _message, _info, green, false, false))
 	}
 }
 
 func Debug(_message string) {
 	if logLevel > 4 {
-		fmt.Println(logBuild(_debugFormat, _message, _debug, cyan, false))
+		fmt.Println(logBuild(_debugFormat, _message, _debug, cyan, false, true))
 	}
 }
 
 func Trace(_message string) {
 	if logLevel > 5 {
-		fmt.Println(logBuild(_traceFormat, _message, _trace, gray, false))
+		fmt.Println(logBuild(_traceFormat, _message, _trace, gray, false, true))
 	}
 }
 
