@@ -12,7 +12,7 @@ var (
 )
 
 const (
-	version = "v0.0.7"
+	version = "v0.0.8"
 
 	_fatal   = red + "[FATAL]   " + reset
 	_error   = red + "[ERROR]   " + reset
